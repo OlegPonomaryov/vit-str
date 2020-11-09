@@ -1,0 +1,9 @@
+# PyCharm folders
+.idea
+__pycache__
+
+# A virtual environment
+.venv
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
