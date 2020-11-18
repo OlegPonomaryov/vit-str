@@ -1,4 +1,4 @@
-"""Tools for notebooks"""
+"""Tools for notebooks."""
 import matplotlib
 import matplotlib.pyplot as plt
 
