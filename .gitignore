@@ -7,9 +7,3 @@ __pycache__
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints
-
-# Saved models and weights
-*.h5
-*.pb
-*.data*
-*.index

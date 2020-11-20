@@ -1,4 +1,4 @@
-"""Tools for MJSynth dataset."""
+"""Tools for the MJSynth dataset."""
 import tensorflow as tf
 from pathlib import Path
 
@@ -28,7 +28,7 @@ BAD_IMAGES = {
 
 
 def load_mjsynth(path):
-    """Loads MJSynth dataset as tf.data.Dataset objects.
+    """Loads the MJSynth dataset as tf.data.Dataset objects.
 
     :param path: Path to the dataset's main directory, that contains annotation files
     :return: Train, validation and test datasets
@@ -76,7 +76,7 @@ def process_path(path, rescaling, char_to_label):
 
 def load_image(path, rescaling):
     image_data = tf.io.read_file(path)
-    image = tf.image.decode_png(image_data, channels=datasets.IMAGE_CHANNELS)
+    image = tf.image.decode_jpeg(image_data, channels=datasets.IMAGE_CHANNELS)
     image = tf.image.resize(image, [datasets.IMAGE_HEIGHT, datasets.IMAGE_WIDTH])
     image = rescaling(image)
     return image
